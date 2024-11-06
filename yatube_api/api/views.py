@@ -4,9 +4,9 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework.permissions import IsAuthenticated
 
-from posts.models import Post, Group, Comment
 from api.serializers import PostSerializer, GroupSerializer, CommentSerializer
 from api.permissions import IsAuthorOrReadOnly
+from posts.models import Post, Group, Comment
 
 
 class PostViewSet(viewsets.ModelViewSet):
