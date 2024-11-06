@@ -30,7 +30,7 @@ class Post(models.Model):
     )
 
     def __str__(self):
-        return self.text
+        return self.text[:50] + '...' if len(self.text) > 50 else self.text
 
 
 class Comment(models.Model):
